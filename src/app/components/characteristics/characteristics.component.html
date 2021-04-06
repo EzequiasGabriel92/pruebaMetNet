@@ -1,0 +1,9 @@
+<div class="">
+  <h3 class="text-center w-100 mt-2 mb-2"><b>Characteristics</b></h3>
+  <div class="itemCharacteristics" >
+    <ul class="list-group" *ngFor="let item of listCharacteristics">
+      <li class="list-group-item">{{item.versions[0].name}}:
+        <span class="ml-2">{{item.versions[0].value}}</span></li>
+    </ul>
+  </div>
+</div>

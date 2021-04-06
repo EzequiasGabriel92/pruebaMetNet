@@ -1,0 +1,28 @@
+<div class="table mt-5">
+  <table class="table table-striped mt-2 mb-2">
+    <thead>
+      <tr>
+        <th scope="col">Nombre Precio</th>
+        <th scope="col">Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">PrecioBase</th>
+        <td>{{productOfferingPrices.precioBase |currency:'COP '}}</td>
+      </tr>
+      <tr>
+        <th scope="row">ImpuestoIva</th>
+        <td>{{productOfferingPrices.impuestoIva |currency:'COP '}}</td>
+      </tr>
+      <tr>
+        <th scope="row">ImpuestoOtro</th>
+        <td>{{productOfferingPrices.impuestoOtro |currency:'COP '}}</td>
+      </tr>
+      <tr>
+        <th scope="row">PrecioVenta</th>
+        <td>{{productOfferingPrices.precioVenta |currency:'COP '}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

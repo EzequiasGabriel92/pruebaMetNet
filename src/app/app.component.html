@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-12 col-md-6">
+      <form class="form-group" action="" [formGroup]="formUssr">
+        <label class="d-block text-primary" for="">Ofertas Disponibles</label>
+        <select class="d-block w-100 form-select" name="" id="" formControlName="ofert">
+          <option value="">Seleccionar</option>
+          <option *ngFor="let item of itemOferts" [ngValue]="item">{{item.versions[0].name}}</option>
+        </select>
+      </form>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-offer *ngIf="formUssr.controls['ofert'].value != ''"
+      [versions]="versions"></app-offer>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-12 col-md-6">
+      <app-characteristics *ngIf="formUssr.controls['ofert'].value != ''"
+      [listCharacteristics]="listCharacteristics"></app-characteristics>
+    </div>
+    <div class="col-12 col-md-6">
+      <app-prices *ngIf="formUssr.controls['ofert'].value != ''"
+      [productOfferingPrices]="productOfferingPrices"></app-prices>
+    </div>
+  </div>
+</div>
